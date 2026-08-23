@@ -1,0 +1,88 @@
+@import 'mixin';
+.c-form {
+    @include mq(md) {
+        &__inner {
+            max-width: 900px;
+            margin-inline: auto;
+        }
+    }
+}
+
+
+.forminator-custom-form {
+    input[type=text],input[type=email], textarea, select {
+        appearance: none;
+        font-size: 16px;
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #dadada;
+        resize: none;
+    }
+}
+#form {
+    .forminator-button {
+        width: 100%;
+        max-width: 340px;
+        margin-inline: auto;
+        display: block;
+    }
+    .forminator-label {
+        margin-bottom: 3px;
+        display: block;
+        font-size: 14px !important;
+    }
+    .forminator-checkbox {
+        margin-block: 12px;
+    }
+    .forminator-error-message {
+        color: #E51919;
+        background-color: #F9E4E8;
+        font-size: 12px;
+        width: 100%;
+        display: block;
+        padding: 3px 7px;
+        margin-top: 8px;
+        line-height: 1.4 !important;
+    }
+    .forminator-required {
+        color: #E51919;
+    }
+    .forminator-description {
+        font-size: 11px;
+        text-align: right;
+        display: block;
+    }
+    .forminator-checkbox-box {
+        border-color: #e2e2e2;
+        background-color: #EDEDED;
+        color: #097BAA;
+    }
+    .forminator-button {
+        font-weight: 600;
+        padding: 15px;
+    }
+    @include mq(md) {
+        .forminator-label {
+            margin-bottom: 5px;
+            font-size: 16px !important;
+        }
+        .forminator-input {
+            padding: 14px 10px;
+        }
+        .forminator-error-message {
+            padding: 7px 10px;
+            margin-top: 10px;
+        }
+        .forminator-checkbox-label {
+            font-size: 16px;
+        }
+        .forminator-checkbox {
+            margin-block: 15px;
+        }
+    }
+}
+
+
+
+

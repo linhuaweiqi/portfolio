@@ -1,0 +1,21 @@
+@import 'mixin';
+.l-inner {
+  padding-inline: 20px;
+  max-width: 1200px;
+  margin-inline: auto;
+  box-sizing: content-box;
+  padding-inline: 2rem;
+}
+.l-section {
+  padding-block: 3.2rem;
+}
+@include mq(sm) {
+  .l-section {
+    padding-block: 4rem;
+  }
+}
+@include mq(md) {
+  .l-section {
+    padding-block: 8rem;
+  }
+}

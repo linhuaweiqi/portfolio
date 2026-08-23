@@ -1,0 +1,134 @@
+@import 'mixin';
+// btn
+.c-btn {
+  background: $main-color;
+  color: #fff;
+  font-weight: 600;
+  padding: 1.2rem 2.4rem;
+  width: 100%;
+  max-width: 32rem;
+  display: block;
+  margin: 2rem auto 0;
+  position: relative;
+  text-align: center;
+  border-radius: 50rem;
+  font-size: 1.6rem;
+  &:after {
+    content: "";
+    display: block;
+    background-image: url(/cms/wp-content/themes/npat/smart-insert-lp/img/arrow-white.svg);
+    width: 1.8rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+// arrow
+.c-arrow-right {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 0 6px;
+    border-top: 1.5px solid;
+    border-right: 1.5px solid;
+    transform: rotate(45deg);
+}
+.c-arrow-bottom {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 0 6px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+}
+
+// フローティングバナー
+.c-floating-banner {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  background: #000;
+  color: #fff;
+  padding: 16px 20px;
+  border-radius: 8px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s, visibility .3s;
+  &__link {
+    font-size: 1.8rem;
+  }
+  &__close {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 9px;
+    top: 8px;
+    &:hover {
+        cursor: pointer;
+    }
+    &:before,&:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2.5px; /* 棒の幅（太さ） */
+      height: 23px; /* 棒の高さ */
+      background: #333;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+.c-floating-banner.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+// heading
+.c-heading {
+  line-height: 1.6;
+}
+.c-heading--lv1 {
+  font-size: myClamp(32,40,390,1280);
+  margin-bottom: myClamp(24,32,390,1280);
+}
+.c-heading--lv2 {
+  font-size: myClamp(24,32,390,1280);
+  margin-bottom: myClamp(24,32,390,1280);
+}
+.c-heading--lv3 {
+  font-size: myClamp(18,24,390,1280);
+  margin-bottom: myClamp(14,18,390,1280);
+}
+.c-heading--lv4 {
+  font-size: myClamp(16,18,390,1280);
+  margin-bottom: myClamp(12,14,390,1280);
+}
+
+// ------------------------
+// card
+// ------------------------
+.c-card {
+  &__box {
+    background-color: #fff;
+    padding-inline: myClamp(14,22,390,1280);
+    padding-block: myClamp(20,24,390,1280);
+  }
+  &__image {
+    margin-bottom: myClamp(14,18,390,1280);;
+  }
+}

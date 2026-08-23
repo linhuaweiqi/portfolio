@@ -1,0 +1,88 @@
+@import 'mixin';
+// ----------------------
+// header
+// ----------------------
+.l-header {
+    padding-top: 32px;
+    &__nav {
+        display: flex;
+        flex-direction: column;
+    }
+    &__link {
+        padding-block: 10px;
+        font-size: 16px;
+    }
+}
+
+// ----------------------
+// footer
+// ----------------------
+.footer {
+    background-color: #888;
+    color: #fff;
+    &__copyright {
+        background: #333;
+        color: #fff;
+        padding: 1.2rem;
+        text-align: center;
+        font-size: 1.1rem;
+        position: relative;
+        z-index: 200;
+    }
+    &__nav {
+        display: none;
+    }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__right {
+        width: 70%;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        padding-block: .5rem;
+        img {
+            max-width: 11rem;
+        }
+    }
+    @include mq(md) {
+        &__nav {
+            display: block;
+        }
+    }
+}
+.footer-menu {
+    &__list {
+        text-align: center;
+    }
+    &__item {
+        padding-bottom: 1rem;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    @include mq(md) {
+        padding: 0;
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 40rem;
+            margin: 0 auto 1rem;
+        }
+        &__item {
+            padding-bottom: 0;
+            a {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+
+// footer end
+

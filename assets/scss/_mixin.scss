@@ -1,0 +1,31 @@
+$main-color: #004098;
+
+// ------------------------
+// breakpoints
+// ------------------------
+$breakpoints: (
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px
+);
+@mixin mq($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+// ------------------------
+// clamp
+// ------------------------
+@function myClamp($from, $to, $min-vw: 375, $max-vw: 1300) {
+  $slope: ($to - $from) / ($max-vw - $min-vw);
+
+  $intercept: ($from - $min-vw * $slope) / 10;
+
+  $min: if($from < $to, $from, $to);
+  $max: if($from < $to, $to, $from);
+
+  @return unquote(
+    'clamp(#{$min / 10}rem, #{$intercept}rem + #{100 * $slope}vw, #{$max / 10}rem)'
+  );
+}
+

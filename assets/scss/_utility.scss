@@ -1,0 +1,271 @@
+@import 'mixin';
+// color
+.u-bg-gray {
+  background-color: #F5F5F5;
+}
+.u-color-white {
+  color: #fff;
+}
+.u-color-red {
+  color: #E50000;
+}
+
+// text
+.u-text-center {
+  text-align: center;
+}
+.u-text-link {
+  color: #0000ee;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+.u-note {
+    padding-top: .5rem;
+    display: block;
+    line-height: 1.6;
+    li {
+        font-size: 1.2rem;
+    }
+}
+.u-indentback {
+    text-indent: -1em;
+    padding-left: 1em;
+}
+.u-title--en {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+
+// shadow
+.u-box-shadow {
+  box-shadow: 0 0 25px rgba(0,0,0,.08);
+}
+
+// spacing
+.u-mt-0 {
+  margin-top: 0 !important;
+}
+.u-mb-0 {
+  margin-bottom: 0 !important;
+}
+.u-pt-0 {
+  padding-top: 0 !important;
+}
+.u-pb-0 {
+  padding-bottom: 0 !important;
+}
+
+// display
+.u-indent-back {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+// font
+.u-font-roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.u-font-en {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
+}
+
+// br
+.u-sp-only {
+  display: block;
+}
+.u-pc-only {
+  display: none;
+}
+@include mq(sm) {
+  .u-sp-only {
+    display: none;
+  }
+}
+@include mq(md) {
+  .u-pc-only {
+    display: block;
+  }
+}
+// hover
+@include mq(md) {
+    .u-hover-opacity {
+      transition: opacity .3s;
+      &:hover {
+        opacity: .7;
+      }
+    }
+    .u-hover-radius {
+      transition: .4s;
+      &:hover {
+        border-radius: 5px;
+      }
+    }
+    .u-hover-scale {
+      display: block;
+      overflow: hidden;
+      transition: .4s;
+      img {
+        overflow: hidden;
+      }
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .u-hover-rotate {
+      &:hover {
+        transform: rotate(10deg);
+      }
+    }
+    .u-hover-shadow {
+      &:hover {
+        box-shadow: 0 0 20px rgb(1 1 1 / 12%);
+      }
+    }
+}
+// line
+.u-line-dotted {
+    background-image : linear-gradient(to right, #BFBFBF, #BFBFBF 2px, transparent 2px, transparent 8px);  /* 幅2の線を作る */
+    background-size: 8px 2px;          /* グラデーションの幅・高さを指定 */
+    background-position: left bottom;  /* 背景の開始位置を指定 */
+    background-repeat: repeat-x;       /* 横向きにのみ繰り返す */
+}
+
+
+
+/*----------------------
+ブロックエディタ
+----------------------*/
+.block-editor {
+    // 見出し
+    h2,h3,h4,h5,h6 {
+        margin-bottom: 1.2rem;
+        font-weight: 600;
+    }
+    h2 {
+        font-size: 2rem;
+        padding: 1.5rem;
+        color: #494949;
+        background: #fffaf4;
+        border-left: solid 5px $main-color;
+    }
+    h3 {
+        font-size: 2rem;
+        padding: 0.5em 0;
+        border-bottom: solid 3px $main-color;
+    }
+    h4 {
+        font-size: 1.8rem;
+        border-bottom: 3px solid #e3e3e3;
+        padding-bottom: 1rem;
+        position: relative;
+        &:after {
+            content: "";
+            background-color: $main-color;
+            width: 2em;
+            height: 3px;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            z-index: 1;
+        }
+    }
+    h5 {
+        font-size: 1.6rem;
+        border-bottom: 1px solid #333;
+        padding-bottom: 0.8rem;
+    }
+    a {
+        text-decoration: underline;
+        color: #0000ee;
+        font-size: 1.4rem;
+        &:hover {
+            opacity: .6;
+            transition: .4s;
+        }
+    }
+    p {
+        padding-bottom: 1.5rem;
+    }
+    .post-date {
+        padding-bottom: .5rem;
+        font-size: 1.2rem;
+    }
+    .post-title {
+        font-size: 2rem;
+        padding-bottom: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+/*----------------------------------
+タブレット表示
+----------------------------------*/
+@include mq(sm) {
+
+/*----------------------
+ブロックエディタ
+----------------------*/
+.block-editor {
+    // 見出し
+    h2 {
+        font-size: 2.4rem;
+        padding: 2rem 1.5rem;
+    }
+    a {
+        font-size: 1.6rem;
+    }
+    .post-date {
+        padding-bottom: .8rem;
+        font-size: 1.6rem;
+    }
+    .post-title {
+        font-size: 3.2rem;
+        padding-bottom: 4rem;
+    }
+    img {
+        margin-top: 2rem;
+    }
+}
+
+}
+
+.ta-l {
+    text-align: left;
+}
+.ta-c {
+    text-align: center;
+}
+.ta-r {
+    text-align: right;
+}
+.fw-thin {
+    font-weight: 100;
+}
+.fw-exlight {
+    font-weight: 200;
+}
+.fw-light {
+    font-weight: 300;
+}
+.fw-regular {
+    font-weight: 400;
+}
+.fw-medium {
+    font-weight: 500;
+}
+.fw-semibold {
+    font-weight: 600;
+}
+.fw-bold {
+    font-weight: 700;
+}
+.fw-semiblack {
+    font-weight: 800;
+}
+.fw-black {
+    font-weight: 900;
+}

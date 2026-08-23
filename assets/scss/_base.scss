@@ -1,0 +1,150 @@
+@import 'mixin';
+// ------------------------
+// reset
+// ------------------------
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.4rem;
+	line-height: 1.8;
+	color: #312F2F;
+	font-family: "Noto Sans JP", serif;
+	font-weight: 400;
+	padding-top: 6.0rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: none !important;
+	@include mq(lg) {
+		padding-top: 11rem;
+		padding-bottom: 0;
+		font-size: 1.6rem;
+	}
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+h1,h2,h3,h4,li,dt,input {
+	line-height: 1.4;
+}
+h1,h2,h3,h4 {
+	font-weight: 600;
+}
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+pre {
+	white-space: pre-wrap;
+}
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input[type="text"],
+textarea,
+select {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: 16px;
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid #dadada;
+	resize: none;
+
+	&.w10 {
+		width: 10%;
+		min-width: 70px;
+	}
+	&.w50 {
+		width: 50%;
+		min-width: 300px;
+	}
+	&.w70 {
+		width: 70%;
+		min-width: 300px;
+	}
+}
+::placeholder {
+	color: #888;
+}
+
+// フッター画面最下層に固定
+html {
+  height: 100%;
+  scroll-padding-top: 6rem; //アンカーリンクでヘッダーの高さ分余白調整
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 1.4rem;
+  @include mq(md) {
+    font-size: 1.6rem;
+  }
+}
+header {
+  width: 100%;
+}
+footer {
+  position: sticky;
+  top: 100vh;
+  width: 100%;
+}
+// フッター画面最下層に固定 end
+
+// ------------------------
+// base
+// ------------------------
+main {
+    overflow-x: hidden;
+    color: #333;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+p,a,li {
+    line-height: 1.4;
+    font-size: 14px;
+    letter-spacing: .4px;
+    @include mq(md) {
+      font-size: 16px;
+    }
+}
+
