@@ -34,6 +34,24 @@
 .u-title--en {
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
+  font-size: myClamp(26, 48);
+}
+.u-title--jp {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: myClamp(14, 26);
+  display: flex;
+  align-items: center;  
+  margin-bottom: myClamp(14, 24);
+  &:before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: $main;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
 }
 
 // shadow
@@ -133,106 +151,6 @@
     background-position: left bottom;  /* 背景の開始位置を指定 */
     background-repeat: repeat-x;       /* 横向きにのみ繰り返す */
 }
-
-
-
-/*----------------------
-ブロックエディタ
-----------------------*/
-.block-editor {
-    // 見出し
-    h2,h3,h4,h5,h6 {
-        margin-bottom: 1.2rem;
-        font-weight: 600;
-    }
-    h2 {
-        font-size: 2rem;
-        padding: 1.5rem;
-        color: #494949;
-        background: #fffaf4;
-        border-left: solid 5px $main-color;
-    }
-    h3 {
-        font-size: 2rem;
-        padding: 0.5em 0;
-        border-bottom: solid 3px $main-color;
-    }
-    h4 {
-        font-size: 1.8rem;
-        border-bottom: 3px solid #e3e3e3;
-        padding-bottom: 1rem;
-        position: relative;
-        &:after {
-            content: "";
-            background-color: $main-color;
-            width: 2em;
-            height: 3px;
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            z-index: 1;
-        }
-    }
-    h5 {
-        font-size: 1.6rem;
-        border-bottom: 1px solid #333;
-        padding-bottom: 0.8rem;
-    }
-    a {
-        text-decoration: underline;
-        color: #0000ee;
-        font-size: 1.4rem;
-        &:hover {
-            opacity: .6;
-            transition: .4s;
-        }
-    }
-    p {
-        padding-bottom: 1.5rem;
-    }
-    .post-date {
-        padding-bottom: .5rem;
-        font-size: 1.2rem;
-    }
-    .post-title {
-        font-size: 2rem;
-        padding-bottom: 1.2rem;
-        font-weight: 600;
-    }
-}
-
-/*----------------------------------
-タブレット表示
-----------------------------------*/
-@include mq(sm) {
-
-/*----------------------
-ブロックエディタ
-----------------------*/
-.block-editor {
-    // 見出し
-    h2 {
-        font-size: 2.4rem;
-        padding: 2rem 1.5rem;
-    }
-    a {
-        font-size: 1.6rem;
-    }
-    .post-date {
-        padding-bottom: .8rem;
-        font-size: 1.6rem;
-    }
-    .post-title {
-        font-size: 3.2rem;
-        padding-bottom: 4rem;
-    }
-    img {
-        margin-top: 2rem;
-    }
-}
-
-}
-
 .ta-l {
     text-align: left;
 }

@@ -123,11 +123,11 @@
 // card
 // ------------------------
 .c-card {
-  &__box {
     background-color: #fff;
-    padding-inline: myClamp(14,22,390,1280);
+    padding-inline: myClamp(18,22,390,1280);
     padding-block: myClamp(20,24,390,1280);
-  }
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    border-radius: 8px;
   &__image {
     margin-bottom: myClamp(14,18,390,1280);;
   }
