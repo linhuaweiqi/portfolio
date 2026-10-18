@@ -2,8 +2,8 @@
     "works": [
         {
             "id": "work01",
-            "url": "/works/work01/",
-            "thumb": "/assets/images/works/work01_thumb.jpg",
+            "url": "works/work01/",
+            "thumb": "assets/images/works/work01_thumb.jpg",
             "title": "ナブテスコ舶用カンパニー株式会社",
             "categories": [
                 "corporate",
@@ -18,8 +18,8 @@
         },
         {
             "id": "work02",
-            "url": "/works/work02/",
-            "thumb": "/assets/images/works/work02.jpg",
+            "url": "works/work02/",
+            "thumb": "assets/images/works/work02.jpg",
             "title": "〇〇株式会社 採用サイト",
             "categories": [
                 "recruit"
@@ -32,8 +32,8 @@
         },
         {
             "id": "work03",
-            "url": "/works/work03/",
-            "thumb": "/assets/images/works/work03.jpg",
+            "url": "works/work03/",
+            "thumb": "assets/images/works/work03.jpg",
             "title": "〇〇ブランドサイト",
             "categories": [
                 "brand"
