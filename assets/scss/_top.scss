@@ -153,7 +153,7 @@
 // skills
 // -------------------
 .p-skills {
-    background: url(./assets/images/top/skills_bg.jpg) no-repeat center center;
+    background: url(/portfolio/assets/images/top/skills_bg.jpg) no-repeat center center;
     background-size: cover;
     &__heading {
         font-size: myClamp(16, 20);
@@ -184,7 +184,7 @@
         &--1 {
             .p-skills__heading {
                 &::before {
-                    background: url(./assets/images/top/slills_1.svg) no-repeat center center;
+                    background: url(/portfolio/assets/images/top/slills_1.svg) no-repeat center center;
                     background-size: contain;
                 }
             }
@@ -192,7 +192,7 @@
         &--2 {
             .p-skills__heading {
                 &::before {
-                    background: url(./assets/images/top/slills_2.svg) no-repeat center center;
+                    background: url(/portfolio/assets/images/top/slills_2.svg) no-repeat center center;
                     background-size: contain;
                 }
             }
@@ -200,7 +200,7 @@
         &--3 {
             .p-skills__heading {
                 &::before {
-                    background: url(./assets/images/top/slills_3.svg) no-repeat center center;
+                    background: url(/portfolio/assets/images/top/slills_3.svg) no-repeat center center;
                     background-size: contain;
                 }
             }
@@ -208,7 +208,7 @@
         &--4 {
             .p-skills__heading {
                 &::before {
-                    background: url(./assets/images/top/slills_4.svg) no-repeat center center;
+                    background: url(/portfolio/assets/images/top/slills_4.svg) no-repeat center center;
                     background-size: contain;
                 }
             }
@@ -216,7 +216,7 @@
         &--5 {
             .p-skills__heading {
                 &::before {
-                    background: url(./assets/images/top/slills_5.svg) no-repeat center center;
+                    background: url(/portfolio/assets/images/top/slills_5.svg) no-repeat center center;
                     background-size: contain;
                 }
             }
@@ -224,7 +224,7 @@
         &--6 {
             .p-skills__heading {
                 &::before {
-                    background: url(./assets/images/top/skills_14.svg) no-repeat center center;
+                    background: url(/portfolio/assets/images/top/skills_14.svg) no-repeat center center;
                     background-size: contain;
                 }
              }

@@ -1,19 +1,5 @@
-// ローカルとGitHubのベースパスを自動判定
-const BASE_PATH =
-    location.hostname === 'linhuaweiqi.github.io'
-        ? '/portfolio/'
-        : '/';
-
-// JSONの読み込み先
-const WORKS_JSON = `${BASE_PATH}data/works.json`;
-
-// JSON内の相対パスをサイトルート基準に変換
-const resolvePath = (path) => {
-    return new URL(path, location.origin + BASE_PATH).href;
-};
-
 // 制作事例 json 管理用
-fetch(WORKS_JSON)
+fetch('/portfolio/data/works.json')
     .then((response) => response.json())
     .then((data) => {
 
@@ -23,7 +9,7 @@ fetch(WORKS_JSON)
 
             const workItem = document.createElement('a');
 
-            workItem.href = resolvePath(work.url);
+            workItem.href = work.url;
             workItem.classList.add(
                 'p-works__grid-box',
                 'l-col--12',
@@ -41,7 +27,7 @@ fetch(WORKS_JSON)
 
             workItem.innerHTML = `
                 <img
-                    src="${resolvePath(work.thumb)}"
+                    src="${work.thumb}"
                     alt="${work.title}"
                     class="p-works__image"
                 >
@@ -67,7 +53,7 @@ fetch(WORKS_JSON)
     });
 
 // top json管理用
-fetch(WORKS_JSON)
+fetch('/portfolio/data/works.json')
 .then((response) => response.json())
 .then((data) => {
 
@@ -83,7 +69,7 @@ fetch(WORKS_JSON)
 
         const workItem = document.createElement('a');
 
-        workItem.href = resolvePath(work.url);
+        workItem.href = work.url;
 
         workItem.classList.add(
             'p-works__grid-box',
@@ -100,7 +86,7 @@ fetch(WORKS_JSON)
 
         workItem.innerHTML = `
             <img
-                src="${resolvePath(work.thumb)}"
+                src="${work.thumb}"
                 alt="${work.title}"
                 class="p-works__image"
             >
@@ -126,7 +112,7 @@ fetch(WORKS_JSON)
     });
 });
 
-fetch(WORKS_JSON)
+fetch('/portfolio/data/works.json')
     .then((response) => response.json())
     .then((data) => {
 
@@ -153,7 +139,7 @@ fetch(WORKS_JSON)
         // 前の作品がある場合
         if (prevWork) {
 
-            prevLink.href = resolvePath(prevWork.url);
+            prevLink.href = prevWork.url;
 
         } else {
 
@@ -165,7 +151,7 @@ fetch(WORKS_JSON)
         // 次の作品がある場合
         if (nextWork) {
 
-            nextLink.href = resolvePath(nextWork.url);
+            nextLink.href = nextWork.url;
 
         } else {
 
@@ -176,3 +162,4 @@ fetch(WORKS_JSON)
 
     });
 
+    

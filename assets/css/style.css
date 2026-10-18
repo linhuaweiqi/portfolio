@@ -719,7 +719,7 @@ p, a, li {
   display: block;
   aspect-ratio: 1/1;
   width: 23px;
-  background: url(./assets/images/common/btn_arrow.svg) no-repeat center center;
+  background: url(/portfolio/assets/images/common/btn_arrow.svg) no-repeat center center;
   background-size: contain;
   position: absolute;
   right: 14px;
@@ -1330,7 +1330,7 @@ p, a, li {
 }
 
 .p-skills {
-  background: url(./assets/images/top/skills_bg.jpg) no-repeat center center;
+  background: url(/portfolio/assets/images/top/skills_bg.jpg) no-repeat center center;
   background-size: cover;
 }
 .p-skills__heading {
@@ -1366,27 +1366,27 @@ p, a, li {
           box-shadow: var(--shadow);
 }
 .p-skills__grid-box--1 .p-skills__heading::before {
-  background: url(./assets/images/top/slills_1.svg) no-repeat center center;
+  background: url(/portfolio/assets/images/top/slills_1.svg) no-repeat center center;
   background-size: contain;
 }
 .p-skills__grid-box--2 .p-skills__heading::before {
-  background: url(./assets/images/top/slills_2.svg) no-repeat center center;
+  background: url(/portfolio/assets/images/top/slills_2.svg) no-repeat center center;
   background-size: contain;
 }
 .p-skills__grid-box--3 .p-skills__heading::before {
-  background: url(./assets/images/top/slills_3.svg) no-repeat center center;
+  background: url(/portfolio/assets/images/top/slills_3.svg) no-repeat center center;
   background-size: contain;
 }
 .p-skills__grid-box--4 .p-skills__heading::before {
-  background: url(./assets/images/top/slills_4.svg) no-repeat center center;
+  background: url(/portfolio/assets/images/top/slills_4.svg) no-repeat center center;
   background-size: contain;
 }
 .p-skills__grid-box--5 .p-skills__heading::before {
-  background: url(./assets/images/top/slills_5.svg) no-repeat center center;
+  background: url(/portfolio/assets/images/top/slills_5.svg) no-repeat center center;
   background-size: contain;
 }
 .p-skills__grid-box--6 .p-skills__heading::before {
-  background: url(./assets/images/top/skills_14.svg) no-repeat center center;
+  background: url(/portfolio/assets/images/top/skills_14.svg) no-repeat center center;
   background-size: contain;
 }
 .p-skills__grid-box--6 .p-skills__item {

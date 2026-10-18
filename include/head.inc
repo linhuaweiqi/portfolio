@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/portfolio/assets/css/style.css">
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
