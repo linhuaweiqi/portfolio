@@ -30,26 +30,31 @@ if (hamburger && nav) {
     });
 }
 
-// 制作事例一覧絞り込み
+
+ // 制作事例一覧絞り込み
 const categoryLinks = document.querySelectorAll('.category__link');
-const worksItems = document.querySelectorAll('.p-works__grid-box');
+const worksList = document.querySelector('#works-list');
 const categoryName = document.querySelector('.p-works__cat-name');
 
 categoryLinks.forEach((link) => {
 
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
 
         const selectedCategory = link.dataset.category;
 
-        categoryLinks.forEach((link) => {
-            link.classList.remove('is-active');
+        categoryLinks.forEach((item) => {
+            item.classList.remove('is-active');
         });
 
         link.classList.add('is-active');
 
+        // クリック時点で作品を取得する
+        const worksItems = worksList.querySelectorAll('.p-works__grid-box');
+
         worksItems.forEach((item) => {
 
-            const categories = item.dataset.category;
+            const categories = (item.dataset.category || '').split(' ');
 
             if (
                 selectedCategory === 'all' ||
@@ -62,9 +67,11 @@ categoryLinks.forEach((link) => {
 
         });
 
-        const selectedName = link.textContent;
-        categoryName.textContent = selectedName;
+        if (categoryName) {
+            categoryName.textContent = link.textContent.trim();
+        }
 
     });
 
 });
+
