@@ -39,10 +39,10 @@
 .u-title--jp {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
-  font-size: myClamp(14, 26);
+  font-size: myClamp(14, 16);
   display: flex;
   align-items: center;  
-  margin-bottom: myClamp(14, 24);
+  margin-bottom: myClamp(14, 40);
   &:before {
     content: '';
     display: block;
@@ -186,4 +186,39 @@
 }
 .fw-black {
     font-weight: 900;
+}
+.u-btn {
+  display: inline-block;
+  background-color: $black;
+  color: #fff;
+  border-radius: 50rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 32px;
+  padding: 1.5rem 2rem;
+  transition: .4s;
+  position: relative;
+  max-width: 320px;
+  margin-inline: auto;
+  display: block;
+  &:hover {
+    opacity: .7;
+  }
+  &::after {
+    content: "";
+    display: block;
+    aspect-ratio: 1 / 1;
+    width: 23px;
+    background: url(/assets/images/common/btn_arrow.svg) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @include mq(md) {
+    margin-top: 48px;
+  }
 }

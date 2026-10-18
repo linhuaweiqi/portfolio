@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>portfolio</title>
-
-    <!-- css -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--#include virtual="/include/head.inc" -->
 </head>
 <body>
     
@@ -20,11 +12,11 @@
             <div class="fv__inner">
                 <header class="l-header">
                     <nav class="l-header__nav">
-                        <a href="" class="l-header__link">自己紹介</a>
-                        <a href="" class="l-header__link">自己PR</a>
-                        <a href="" class="l-header__link">スキル</a>
-                        <a href="" class="l-header__link">制作実績</a>
-                        <a href="" class="l-header__link">職務経歴</a>
+                        <a href="#about" class="l-header__link">自己紹介</a>
+                        <a href="#self" class="l-header__link">自己PR</a>
+                        <a href="#skill" class="l-header__link">スキル</a>
+                        <a href="#works" class="l-header__link">制作実績</a>
+                        <a href="#career" class="l-header__link">職務経歴</a>
                     </nav>
                 </header>
                 <div class="fv__bottom-wrap">
@@ -34,14 +26,14 @@
                 </div>
             </div>
         </section>
-        <section class="p-about l-inner l-section">
+        <section class="p-about l-inner l-section" id="about">
             <p class="u-title--en">ABOUT ME</p>
             <h2 class="u-title--jp">自己紹介</h2>
-            <div class="l-grid">
-                <div class="l-col--12 l-col--md-4">
+            <div class="l-grid p-about__grid">
+                <div class="l-col--12 l-col--sm-5 p-about__image-wrap">
                     <img src="/assets/images/top/about_1.png" alt="自己紹介" class="p-about__image">
                 </div>
-                <div class="l-col--12 l-col--md-8">
+                <div class="l-col--12 l-col--sm-7 p-about__text-wrap">
                     <dl class="p-about__list">
                         <dt class="p-about__list-title">経歴</dt>
                         <dd class="p-about__list-text">高校卒業後は大阪に本社のある地元の製薬会社に入社し、事務や倉庫管理などに携わりました。2021年にデザイン制作会社に入社し、 Webデザイナーとして主に企業のコーポレートや採用サイトを作成、大手企業子会社サイトの定期更新や新規LPなども作成しました。サイトの改善提案をさせていただいたり、時には製品紹介動画などの動画編集にも携わりました。</dd>
@@ -53,13 +45,13 @@
                 </div>
             </div>
         </section>
-        <section class="p-self u-bg--gray">
+        <section class="p-self u-bg-gray" id="self">
             <div class="p-self__inner l-inner l-section">
                 <p class="u-title--en">SELF INTRODUCTION</p>
                 <h2 class="u-title--jp">自己PR</h2>
                 <div class="l-grid">
                     <div class="l-col--12 l-col--md-4">
-                        <div class="c-card">
+                        <div class="c-card p-self__card">
                             <p class="p-self__num u-font-en">01</p>
                             <div class="p-self__image-wrap">
                                 <img src="/assets/images/top/self_1.jpg" alt="デザインと実装をつなぐ力" class="p-self__image">
@@ -69,7 +61,7 @@
                         </div>
                     </div>
                     <div class="l-col--12 l-col--md-4">
-                        <div class="c-card">
+                        <div class="c-card p-self__card">
                             <p class="p-self__num u-font-en">02</p>
                             <div class="p-self__image-wrap">
                                 <img src="/assets/images/top/self_2.jpg" alt="チームで成果を生み出すコミュニケーション" class="p-self__image">
@@ -79,7 +71,7 @@
                         </div>
                     </div>
                     <div class="l-col--12 l-col--md-4">
-                        <div class="c-card">
+                        <div class="c-card p-self__card">
                             <p class="p-self__num u-font-en">03</p>
                             <div class="p-self__image-wrap">
                                 <img src="/assets/images/top/self_3.jpg" alt="ユーザーの気持ちに寄り添う心" class="p-self__image">
@@ -91,21 +83,125 @@
                 </div>
             </div>
         </section>
-        <section class="p-skills">
+        <section class="p-skills" id="skill">
             <div class="p-skills__inner l-inner l-section">
                 <p class="u-title--en">SKILLS</p>
                 <h2 class="u-title--jp">スキル</h2>
                 <div class="p-skills__grid">
-                    <div class="p-skills__grid-box">
+                    <div class="p-skills__grid-box p-skills__grid-box--1">
                         <h4 class="p-skills__heading">デザイン</h4>
                         <ul class="p-skills__list">
                             <li class="p-skills__item">＃Webデザイン</li>
                             <li class="p-skills__item">＃LPデザイン</li>
+                            <li class="p-skills__item">＃バナー制作</li>
+                            <li class="p-skills__item">＃UIデザイン</li>
+                            <li class="p-skills__item">＃レスポンシブデザイン</li>
+                        </ul>
+                    </div>
+                    <div class="p-skills__grid-box p-skills__grid-box--2">
+                        <h4 class="p-skills__heading">フロントエンド開発</h4>
+                        <ul class="p-skills__list">
+                            <li class="p-skills__item">＃HTML</li>
+                            <li class="p-skills__item">＃CSS / SCSS</li>
+                            <li class="p-skills__item">＃JavaScript (jQuery)</li>
+                            <li class="p-skills__item">＃WordPress構築</li>
+                            <li class="p-skills__item">＃レスポンシブ対応</li>
+                            <li class="p-skills__item">＃アニメーション実装</li>
+                        </ul>
+                    </div>
+                    <div class="p-skills__grid-box p-skills__grid-box--3">
+                        <h4 class="p-skills__heading">CMS構築</h4>
+                        <ul class="p-skills__list">
+                            <li class="p-skills__item">＃WordPress</li>
+                            <li class="p-skills__item">＃カスタム投稿</li>
+                            <li class="p-skills__item">＃更新しやすい設計</li>
+                            <li class="p-skills__item">＃オリジナルテーマ制作</li>
+                        </ul>
+                    </div>
+                    <div class="p-skills__grid-box p-skills__grid-box--4">
+                        <h4 class="p-skills__heading">ディレクション</h4>
+                        <ul class="p-skills__list">
+                            <li class="p-skills__item">＃サイト分析</li>
+                            <li class="p-skills__item">＃サイト改善提案</li>
+                            <li class="p-skills__item">＃google アナリティクス</li>
+                            <li class="p-skills__item">＃googleサーチコンソール</li>
+                        </ul>
+                    </div>
+                    <div class="p-skills__grid-box p-skills__grid-box--5">
+                        <h4 class="p-skills__heading">その他</h4>
+                        <ul class="p-skills__list">
+                            <li class="p-skills__item">＃動画制作</li>
+                            <li class="p-skills__item">＃React</li>
+                            <li class="p-skills__item">＃Git</li>
+                        </ul>
+                    </div>
+                    <div class="p-skills__grid-box p-skills__grid-box--6">
+                        <h4 class="p-skills__heading">ツール</h4>
+                        <ul class="p-skills__list">
+                            <li class="p-skills__item"><img src="/assets/images/top/slills_6.svg" alt="Figma" class="p-skills__tools-icon"><span>Figma</span></li>
+                            <li class="p-skills__item"><img src="/assets/images/top/slills_7.svg" alt="Photoshop" class="p-skills__tools-icon"><span>Photoshop</span></li>
+                            <li class="p-skills__item"><img src="/assets/images/top/slills_8.svg" alt="Illustrator" class="p-skills__tools-icon"><span>Illustrator</span></li>
+                            <li class="p-skills__item"><img src="/assets/images/top/slills_9.svg" alt="Xd" class="p-skills__tools-icon"><span>Xd</span></li>
+                            <li class="p-skills__item"><img src="/assets/images/top/slills_10.svg" alt="After Effects" class="p-skills__tools-icon"><span>After Effects</span></li>
+                            <li class="p-skills__item"><img src="/assets/images/top/slills_11.svg" alt="VS Code" class="p-skills__tools-icon"><span>VS Code</span></li>
+                            <li class="p-skills__item"><img src="/assets/images/top/slills_12.svg" alt="GitHub" class="p-skills__tools-icon"><span>GitHub</span></li>
+                            <li class="p-skills__item"><img src="/assets/images/top/slills_13.svg" alt="WordPress" class="p-skills__tools-icon"><span>WordPress</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="p-works u-bg-gray" id="works">
+            <div class="p-works__inner l-inner l-section">
+                <p class="u-title--en">WORKS</p>
+                <h2 class="u-title--jp">制作実績</h2>
+                <div class="p-works__grid l-grid" id="top-works-list">
+                    <!-- works.json -->
+                </div>
+                <a href="/works/" class="p-works__btn u-font-en u-btn">VIEW MORE</a>
+            </div>
+        </section>
+        <section class="p-history" id="career">
+            <div class="p-history__inner l-inner l-section">
+                <div class="p-history__left">
+                    <p class="u-title--en">HISTORY</p>
+                    <h2 class="u-title--jp">職務経験</h2>
+                </div>
+                <div class="p-history__list-wrap">
+                    <dl class="p-history__list">
+                        <dt class="p-history__day u-font-en">2018.04 - 2020.02</dt>
+                        <dd class="p-history__data">
+                            <ul class="p-history__data-list">
+                                <li class="p-history__data-item">小城製薬株式会社 製造部所属</li>
+                            </ul>
+                            <ul class="p-history__data-list">
+                                <li class="p-history__data-item">・一般事務</li>
+                                <li class="p-history__data-item">・倉庫管理、出荷入荷作業　など</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class="p-history__list">
+                        <dt class="p-history__day u-font-en">2021.07 - 現在</dt>
+                        <dd class="p-history__data">
+                            <ul class="p-history__data-list">
+                                <li class="p-history__data-item">株式会社ウエンズ ウェブ事業部</li>
+                            </ul>
+                            <ul class="p-history__data-list">
+                                <li class="p-history__data-item">・コーポレートサイト制作</li>
+                                <li class="p-history__data-item">・ブランドサイト制作</li>
+                                <li class="p-history__data-item">・採用サイト制作</li>
+                                <li class="p-history__data-item">・LP制作</li>
+                                <li class="p-history__data-item">・企業サイトの定期更新、改善提案</li>
+                                <li class="p-history__data-item">・バナー作成</li>
+                                <li class="p-history__data-item">・CMS構築</li>                        
+                                <li class="p-history__data-item">・動画制作　など</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
     </main>
+    <!--#include virtual="/include/footer.inc" -->
 </body>
 </html>

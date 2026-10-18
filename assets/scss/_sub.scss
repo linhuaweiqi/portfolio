@@ -1,0 +1,177 @@
+@import '_mixin';
+
+// -------------------
+// fv
+// -------------------
+.fv-sub {
+    border-bottom: 1px solid $line;
+    padding-bottom: myClamp(20, 32, 390, 1280);
+    &__text {
+        font-size: myClamp(40,60,390,1280);
+        font-weight: 300;
+        margin-bottom: 4px;
+    }
+    &__title {
+        font-size: myClamp(14,16,390,1280);
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: "";
+            display: block;
+            width: myClamp(8,9,390,1280);
+            background-color: $main;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            margin-right: 7px;
+            margin-top: 2px;
+        }
+    }
+    &__inner {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    @include mq(md) {
+        &__inner {
+            height: 400px;
+        }
+    }
+}
+.category {
+    border-radius: 10px;
+    padding: myClamp(15,24);
+    &__title {
+        text-align: center;
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+    &__list {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__link {
+        font-size: 16px;
+        background: #fff;
+        padding: 5px 20px;
+        border-radius: 50rem;
+        width: max-content;
+        display: inline-block;
+    }
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        &__title {
+            margin-bottom: 0;
+            width: 10%;
+        }
+    }
+}
+.category__link.is-active {
+    background: #000;
+    color: #fff;
+}
+.p-works {
+    &__cat-name {
+        text-align: center;
+        margin-bottom: 24px;
+        font-size: 20px;
+    }
+}
+.work-detail {
+    &__title {
+        font-size: myClamp(18,24);
+        margin-bottom: myClamp(8,14);
+    }
+    &__url {
+        font-size: 16px;
+        margin-bottom: myClamp(8,14);
+        color: $main;
+        text-decoration: underline;
+        font-weight: 400;
+    }
+    &__image {
+        margin-bottom: 20px;
+    }
+    &__list {
+        max-width: 620px;
+        margin-inline: auto;
+        margin-bottom: myClamp(24,28);
+        &:last-child {
+            margin-bottom: 0;
+        }
+        dt {
+            background-color: $glay;
+            padding-inline: myClamp(12,18);
+            padding: myClamp(10,12);
+            font-size: 16px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            &::before {
+                content: "";
+                display: block;
+                width: 8px;
+                background-color: $main;
+                border-radius: 50%;
+                aspect-ratio: 1/1;
+                margin-right: 8px;
+            }
+        }
+        dd {
+            margin-bottom: myClamp(12,14);
+            display: flex;
+            flex-direction: row;
+            span {
+                display: block;
+            }
+        }
+    }
+    &__list-title {
+        border-left: 2px solid $main;
+        padding-left: 8px;
+        display: inline-block;
+        width: 30%;
+        margin-bottom: 3px;
+    }
+    @include mq(sm) {
+        &__list-title {
+            width: 22%;
+        }
+    }
+    @include mq(md) {
+        &__list {
+            dd {
+                font-size: 16px;
+            }
+        }
+    }
+}
+.pagenation {
+    margin-bottom: 40px;
+    a {
+        font-size: 16px;
+    }
+    .work-detail {
+        &__nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 300px;
+            margin-inline: auto;
+        }
+        &__back {
+            border-radius: 50rem;
+            padding: 10px 20px;
+            display: block;
+            color: #fff;
+            background: #333;
+            margin-inline: 20px;
+            width: 60%;
+            text-align: center;
+        }
+    }
+}
