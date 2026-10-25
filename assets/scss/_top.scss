@@ -55,6 +55,7 @@
     @include mq(md) {
         &__inner {
             margin-inline: 40px;
+            height: 730px;
         }
     }
 }

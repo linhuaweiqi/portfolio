@@ -9,7 +9,8 @@
                 "corporate"
             ],
             "categoryNames": [
-                "コーポレートサイト"
+                "コーポレートサイト",
+                "WordPress"
             ],
             "industry": "船舶機器",
             "featured": true
@@ -23,7 +24,8 @@
                 "corporate"
             ],
             "categoryNames": [
-                "コーポレートサイト"
+                "コーポレートサイト",
+                "WordPress"
             ],
             "industry": "環境",
             "featured": true
@@ -44,18 +46,19 @@
             "featured": true
         },
         {
-            "id": "work04",
-            "url": "/portfolio/works/work04/",
-            "thumb": "/portfolio/assets/images/works/work04_thumb.jpg",
-            "title": "株式会社ピースコネクト様",
+            "id": "work12",
+            "url": "/portfolio/works/work12/",
+            "thumb": "/portfolio/assets/images/works/work12_thumb.jpg",
+            "title": "オムロン ソーシアルソリューションズ株式会社様",
             "categories": [
                 "corporate"
             ],
             "categoryNames": [
                 "コーポレートサイト",
-                "コールセンター"
+                "V2H",
+                "太陽光"
             ],
-            "industry": "サービス",
+            "industry": "蓄電池",
             "featured": true
         },
         {
@@ -83,37 +86,10 @@
             ],
             "categoryNames": [
                 "採用サイト",
-                "舶用"
+                "舶用",
+                "WordPress"
             ],
             "industry": "船舶機器",
-            "featured": true
-        },
-        {
-            "id": "work06",
-            "url": "/portfolio/works/work06/",
-            "thumb": "/portfolio/assets/images/works/work06_thumb.jpg",
-            "title": "エヌパット株式会社様",
-            "categories": [
-                "corporate"
-            ],
-            "categoryNames": [
-                "コーポレートサイト"
-            ],
-            "industry": "工業",
-            "featured": false
-        },
-        {
-            "id": "work07",
-            "url": "/portfolio/works/work07/",
-            "thumb": "/portfolio/assets/images/works/work07_thumb.jpg",
-            "title": "大徳機工株式会社様 / 採用サイト",
-            "categories": [
-                "recruit"
-            ],
-            "categoryNames": [
-                "採用サイト"
-            ],
-            "industry": "機械/工具",
             "featured": true
         },
         {
@@ -125,11 +101,57 @@
                 "corporate"
             ],
             "categoryNames": [
-                "コーポレートサイト"
+                "コーポレートサイト",
+                "WordPress"
             ],
             "industry": "金属加工",
             "featured": true
         },  
+        {
+            "id": "work06",
+            "url": "/portfolio/works/work06/",
+            "thumb": "/portfolio/assets/images/works/work06_thumb.jpg",
+            "title": "エヌパット株式会社様",
+            "categories": [
+                "corporate"
+            ],
+            "categoryNames": [
+                "コーポレートサイト",
+                "WordPress"
+            ],
+            "industry": "工業",
+            "featured": false
+        },
+        {
+            "id": "work04",
+            "url": "/portfolio/works/work04/",
+            "thumb": "/portfolio/assets/images/works/work04_thumb.jpg",
+            "title": "株式会社ピースコネクト様",
+            "categories": [
+                "corporate"
+            ],
+            "categoryNames": [
+                "コーポレートサイト",
+                "コールセンター"
+            ],
+            "industry": "サービス",
+            "featured": true
+        },
+        {
+            "id": "work07",
+            "url": "/portfolio/works/work07/",
+            "thumb": "/portfolio/assets/images/works/work07_thumb.jpg",
+            "title": "大徳機工株式会社様 / 採用サイト",
+            "categories": [
+                "recruit"
+            ],
+            "categoryNames": [
+                "採用サイト",
+                "WordPress"
+            ],
+            "industry": "機械/工具",
+            "featured": true
+        },
         {
             "id": "work09",
             "url": "/portfolio/works/work09/",
@@ -154,7 +176,8 @@
             ],
             "categoryNames": [
                 "コーポレートサイト",
-                "広告"
+                "広告",
+                "WordPress"
             ],
             "industry": "デザイン",
             "featured": true
@@ -168,25 +191,10 @@
                 "brand"
             ],
             "categoryNames": [
-                "ブランドサイト"
+                "ブランドサイト",
+                "WordPress"
             ],
             "industry": "塗料",
-            "featured": true
-        },
-        {
-            "id": "work12",
-            "url": "/portfolio/works/work12/",
-            "thumb": "/portfolio/assets/images/works/work12_thumb.jpg",
-            "title": "オムロン ソーシアルソリューションズ様 / エネルギー事業部",
-            "categories": [
-                "corporate"
-            ],
-            "categoryNames": [
-                "コーポレートサイト",
-                "V2H",
-                "太陽光"
-            ],
-            "industry": "蓄電池",
             "featured": true
         }
         

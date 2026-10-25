@@ -1235,6 +1235,7 @@ p, a, li {
 @media (min-width: 1024px) {
   .fv__inner {
     margin-inline: 40px;
+    height: 730px;
   }
 }
 
