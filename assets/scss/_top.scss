@@ -320,7 +320,7 @@
     }
     &__grid-box {
         background: #fff;
-        box-shadow: var(--shadow);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
         border-radius: myClamp(12, 15);
     }
     &__image {
@@ -337,7 +337,7 @@
         display: inline-block;
     }
     &__heading {
-        font-size: myClamp(16, 18);
+        font-size: myClamp(14,16);
     }
     &__catlist {
         display: flex;
@@ -346,8 +346,8 @@
         flex-wrap: wrap;
     }
     &__textbox {
-        padding-inline: myClamp(15, 32);
-        padding-block: myClamp(15, 32);
+        padding-inline: myClamp(15, 20);
+        padding-block: myClamp(15, 20);
     }
 }
 // -------------------

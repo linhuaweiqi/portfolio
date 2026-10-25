@@ -4,16 +4,191 @@
             "id": "work01",
             "url": "/portfolio/works/work01/",
             "thumb": "/portfolio/assets/images/works/work01_thumb.jpg",
-            "title": "ナブテスコ舶用カンパニー株式会社",
+            "title": "ナブテスコ舶用カンパニー株式会社様",
             "categories": [
-                "corporate",
-                "lp"
+                "corporate"
             ],
             "categoryNames": [
                 "コーポレートサイト"
             ],
-            "industry": "船舶",
+            "industry": "船舶機器",
+            "featured": true
+        },
+        {
+            "id": "work02",
+            "url": "/portfolio/works/work02/",
+            "thumb": "/portfolio/assets/images/works/work02_thumb.jpg",
+            "title": "株式会社ネクサス分析センター様",
+            "categories": [
+                "corporate"
+            ],
+            "categoryNames": [
+                "コーポレートサイト"
+            ],
+            "industry": "環境",
+            "featured": true
+        },
+        {
+            "id": "work03",
+            "url": "/portfolio/works/work03/",
+            "thumb": "/portfolio/assets/images/works/work03_thumb.jpg",
+            "title": "株式会社カナエテクノス様",
+            "categories": [
+                "corporate"
+            ],
+            "categoryNames": [
+                "コーポレートサイト",
+                "WordPress"
+            ],
+            "industry": "化粧用品/医薬品",
+            "featured": true
+        },
+        {
+            "id": "work04",
+            "url": "/portfolio/works/work04/",
+            "thumb": "/portfolio/assets/images/works/work04_thumb.jpg",
+            "title": "株式会社ピースコネクト様",
+            "categories": [
+                "corporate"
+            ],
+            "categoryNames": [
+                "コーポレートサイト",
+                "コールセンター"
+            ],
+            "industry": "サービス",
+            "featured": true
+        },
+        {
+            "id": "work05",
+            "url": "/portfolio/works/work05/",
+            "thumb": "/portfolio/assets/images/works/work05_thumb.jpg",
+            "title": "東レエンジニアリング株式会社様",
+            "categories": [
+                "brand"
+            ],
+            "categoryNames": [
+                "ブランドサイト",
+                "ショールーム"
+            ],
+            "industry": "製造装置/検査装置",
+            "featured": true
+        },
+        {
+            "id": "work13",
+            "url": "/portfolio/works/work13/",
+            "thumb": "/portfolio/assets/images/works/work13_thumb.jpg",
+            "title": "ナブテスコ舶用カンパニー株式会社様 / 採用サイト",
+            "categories": [
+                "recruit"
+            ],
+            "categoryNames": [
+                "採用サイト",
+                "舶用"
+            ],
+            "industry": "船舶機器",
+            "featured": true
+        },
+        {
+            "id": "work06",
+            "url": "/portfolio/works/work06/",
+            "thumb": "/portfolio/assets/images/works/work06_thumb.jpg",
+            "title": "エヌパット株式会社様",
+            "categories": [
+                "corporate"
+            ],
+            "categoryNames": [
+                "コーポレートサイト"
+            ],
+            "industry": "工業",
+            "featured": false
+        },
+        {
+            "id": "work07",
+            "url": "/portfolio/works/work07/",
+            "thumb": "/portfolio/assets/images/works/work07_thumb.jpg",
+            "title": "大徳機工株式会社様 / 採用サイト",
+            "categories": [
+                "recruit"
+            ],
+            "categoryNames": [
+                "採用サイト"
+            ],
+            "industry": "機械/工具",
+            "featured": true
+        },
+        {
+            "id": "work08",
+            "url": "/portfolio/works/work08/",
+            "thumb": "/portfolio/assets/images/works/work08_thumb.jpg",
+            "title": "近江産業株式会社様",
+            "categories": [
+                "corporate"
+            ],
+            "categoryNames": [
+                "コーポレートサイト"
+            ],
+            "industry": "金属加工",
+            "featured": true
+        },  
+        {
+            "id": "work09",
+            "url": "/portfolio/works/work09/",
+            "thumb": "/portfolio/assets/images/works/work09_thumb.jpg",
+            "title": "永樂屋様 / 彦根仏壇ブランドサイト",
+            "categories": [
+                "brand"
+            ],
+            "categoryNames": [
+                "ブランドサイト"
+            ],
+            "industry": "仏壇",
+            "featured": true
+        },
+        {
+            "id": "work10",
+            "url": "/portfolio/works/work10/",
+            "thumb": "/portfolio/assets/images/works/work10_thumb.jpg",
+            "title": "株式会社ウエンズ / 展示会特設サイト",
+            "categories": [
+                "corporate"
+            ],
+            "categoryNames": [
+                "コーポレートサイト",
+                "広告"
+            ],
+            "industry": "デザイン",
+            "featured": true
+        },  
+        {
+            "id": "work11",
+            "url": "/portfolio/works/work11/",
+            "thumb": "/portfolio/assets/images/works/work11_thumb.jpg",
+            "title": "エスケー化研様 / Premium Reform",
+            "categories": [
+                "brand"
+            ],
+            "categoryNames": [
+                "ブランドサイト"
+            ],
+            "industry": "塗料",
+            "featured": true
+        },
+        {
+            "id": "work12",
+            "url": "/portfolio/works/work12/",
+            "thumb": "/portfolio/assets/images/works/work12_thumb.jpg",
+            "title": "オムロン ソーシアルソリューションズ様 / エネルギー事業部",
+            "categories": [
+                "corporate"
+            ],
+            "categoryNames": [
+                "コーポレートサイト",
+                "V2H",
+                "太陽光"
+            ],
+            "industry": "蓄電池",
             "featured": true
         }
+        
     ]
 }

@@ -1501,8 +1501,8 @@ p, a, li {
 }
 .p-works__grid-box {
   background: #fff;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   border-radius: clamp(1.2rem, 1.0783783784rem + 0.3243243243vw, 1.5rem);
 }
 .p-works__image {
@@ -1519,7 +1519,7 @@ p, a, li {
   display: inline-block;
 }
 .p-works__heading {
-  font-size: clamp(1.6rem, 1.5189189189rem + 0.2162162162vw, 1.8rem);
+  font-size: clamp(1.4rem, 1.3189189189rem + 0.2162162162vw, 1.6rem);
 }
 .p-works__catlist {
   display: -webkit-box;
@@ -1531,8 +1531,8 @@ p, a, li {
       flex-wrap: wrap;
 }
 .p-works__textbox {
-  padding-inline: clamp(1.5rem, 0.8108108108rem + 1.8378378378vw, 3.2rem);
-  padding-block: clamp(1.5rem, 0.8108108108rem + 1.8378378378vw, 3.2rem);
+  padding-inline: clamp(1.5rem, 1.2972972973rem + 0.5405405405vw, 2rem);
+  padding-block: clamp(1.5rem, 1.2972972973rem + 0.5405405405vw, 2rem);
 }
 
 .p-history__day {
@@ -1739,13 +1739,14 @@ p, a, li {
 }
 .work-detail__url {
   font-size: 16px;
-  margin-bottom: clamp(0.8rem, 0.5567567568rem + 0.6486486486vw, 1.4rem);
+  display: block;
+  margin-bottom: clamp(2.4rem, 2.0756756757rem + 0.8648648649vw, 3.2rem);
   color: #007ACC;
   text-decoration: underline;
   font-weight: 400;
 }
 .work-detail__image {
-  margin-bottom: 20px;
+  margin-bottom: clamp(2.4rem, 1.427027027rem + 2.5945945946vw, 4.8rem);
 }
 .work-detail__list {
   max-width: 620px;
@@ -1801,6 +1802,9 @@ p, a, li {
   .work-detail__list-title {
     width: 22%;
   }
+  .work-detail__list-content {
+    width: 77%;
+  }
 }
 @media (min-width: 1024px) {
   .work-detail__list dd {
@@ -1821,19 +1825,28 @@ p, a, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 300px;
   margin-inline: auto;
+  max-width: 100%;
+  width: 90%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .pagenation .work-detail__back {
   border-radius: 50rem;
-  padding: 10px 20px;
   display: block;
   color: #fff;
   background: #333;
-  margin-inline: 20px;
-  width: 60%;
   text-align: center;
+  padding: 18px 20px;
+  width: 70%;
+  margin: 0;
+}
+.pagenation .work-detail__prev, .pagenation .work-detail__next {
+  width: 10%;
+}
+@media (min-width: 1024px) {
+  .pagenation .work-detail__nav {
+    max-width: 600px;
+  }
 }

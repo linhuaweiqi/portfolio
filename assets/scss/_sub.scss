@@ -88,13 +88,14 @@
     }
     &__url {
         font-size: 16px;
-        margin-bottom: myClamp(8,14);
+        display: block;
+        margin-bottom: myClamp(24,32);
         color: $main;
         text-decoration: underline;
         font-weight: 400;
     }
     &__image {
-        margin-bottom: 20px;
+        margin-bottom: myClamp(24,48);
     }
     &__list {
         max-width: 620px;
@@ -141,6 +142,9 @@
         &__list-title {
             width: 22%;
         }
+        &__list-content {
+            width: 77%;
+        }
     }
     @include mq(md) {
         &__list {
@@ -159,19 +163,30 @@
         &__nav {
             display: flex;
             align-items: center;
-            justify-content: center;
-            max-width: 300px;
             margin-inline: auto;
+            max-width: 100%;
+            width: 90%;
+            justify-content: space-between;
         }
         &__back {
             border-radius: 50rem;
-            padding: 10px 20px;
             display: block;
             color: #fff;
             background: #333;
-            margin-inline: 20px;
-            width: 60%;
             text-align: center;
+            padding: 18px 20px;
+            width: 70%;
+            margin: 0;
+        }
+        &__prev,&__next {
+            width: 10%;
         }
     }
+    @include mq(md) {
+        .work-detail {
+            &__nav {
+                max-width: 600px;
+            }
+        }
+    }   
 }
