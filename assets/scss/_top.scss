@@ -436,3 +436,62 @@
         }
     }
 }
+// -------------------
+// ui
+// -------------------
+.p-ui {
+    &__card {
+        background-color: #ECF6F8;
+        box-shadow: none;
+    }
+    &__btn {
+        background-color: #2ECBC4;
+    }
+    &__title {
+        margin-bottom: 6px;
+    }
+    &__sub-title {
+        margin-bottom: 32px;
+    }
+    @include mq(sm) {
+        &__card {
+            position: relative;
+        }
+        .l-grid {
+            flex-direction: row;
+            display: flex;
+        }
+        &__image {
+            position: absolute;
+            right: 20px;
+            width: 50%;
+            margin-left: auto;
+            bottom: 0;
+        }
+        &__text {
+            margin-bottom: 30px;
+        }
+    }    
+    @include mq(md) {
+        &__card {
+            padding: 48px 60px;
+        }
+        .l-grid {
+            justify-content: flex-star
+        }
+        &__title {
+            font-size: 32px;
+            font-weight: 400;
+        }
+        &__sub-title {
+            font-weight: 400;
+            margin-bottom: 48px;
+        }
+        &__image {
+            width: 58%;
+        }
+        &__btn {
+            margin-top: 24px;
+        }
+    }   
+}

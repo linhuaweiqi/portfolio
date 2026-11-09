@@ -30,6 +30,23 @@ if (hamburger && nav) {
     });
 }
 
+const hamburgerUi = document.querySelector('.l-ui-header__hamburger');
+const navUi = document.querySelector('.l-ui-header__nav');
+
+if (hamburgerUi && navUi) {
+    hamburgerUi.addEventListener('click', () => {
+        hamburgerUi.classList.toggle('open');
+        navUi.classList.toggle('open');
+    });
+
+    navUi.querySelectorAll('a[href]').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerUi.classList.remove('open');
+            navUi.classList.remove('open');
+        });
+    });
+}
+
 
  // 制作事例一覧絞り込み
 const categoryLinks = document.querySelectorAll('.category__link');
@@ -75,3 +92,62 @@ categoryLinks.forEach((link) => {
 
 });
 
+// header
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = [...document.querySelectorAll('[id^="sec_"]')];
+    const navLinks = [...document.querySelectorAll(".l-ui-header__link")];
+
+    let clickedTarget = null;
+
+    function setActive(id) {
+        navLinks.forEach((link) => {
+            link.classList.toggle(
+                "is-active",
+                link.getAttribute("href") === `#${id}`
+            );
+        });
+    }
+
+    // アンカークリック
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            clickedTarget = link.getAttribute("href").substring(1);
+            setActive(clickedTarget);
+        });
+    });
+
+    // スクロール位置による判定
+    function updateActiveLink() {
+        if (clickedTarget) {
+            const target = document.getElementById(clickedTarget);
+
+            if (target && Math.abs(target.getBoundingClientRect().top) > 150) {
+                return;
+            }
+
+            clickedTarget = null;
+        }
+
+        let current = sections[0];
+
+        sections.forEach((section) => {
+            if (section.getBoundingClientRect().top <= 150) {
+                current = section;
+            }
+        });
+
+        if (
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 5
+        ) {
+            current = sections[sections.length - 1];
+        }
+
+        if (current) setActive(current.id);
+    }
+
+    window.addEventListener("scroll", updateActiveLink);
+    window.addEventListener("resize", updateActiveLink);
+
+    updateActiveLink();
+});
