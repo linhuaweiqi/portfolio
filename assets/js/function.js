@@ -1,51 +1,71 @@
 // headerにクラス付与
+// const header = document.querySelector('.l-header');
+// const fv = document.querySelector('.fv');
+
+// window.addEventListener('scroll', () => {
+// const fvHeight = fv.offsetHeight;
+
+// if (window.scrollY >= fvHeight) {
+//     header.classList.add('is-scrolled');
+// } else {
+//     header.classList.remove('is-scrolled');
+// }
+// });
+
+// header・bodyにクラス付与
 const header = document.querySelector('.l-header');
+const body = document.body;
 const fv = document.querySelector('.fv');
 
-window.addEventListener('scroll', () => {
-const fvHeight = fv.offsetHeight;
+const handleScroll = () => {
+    const fvHeight = fv.offsetHeight;
+    const scrollPosition = body.scrollTop;
 
-if (window.scrollY >= fvHeight) {
-    header.classList.add('is-scrolled');
-} else {
-    header.classList.remove('is-scrolled');
-}
-});
+    if (scrollPosition >= fvHeight) {
+        header.classList.add('is-scrolled');
+        body.classList.add('is-scrolled');
+    } else {
+        header.classList.remove('is-scrolled');
+        body.classList.remove('is-scrolled');
+    }
+};
+
+// bodyのスクロールを監視
+body.addEventListener('scroll', handleScroll);
+
+// 初期状態も判定
+handleScroll();
 
 // ハンバーガーメニュー
-const hamburger = document.querySelector('.l-header-hamburger');
-const nav = document.querySelector('.l-header__nav');
+document.addEventListener('DOMContentLoaded', () => {
 
-if (hamburger && nav) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        nav.classList.toggle('open');
-    });
+    const hamburgers = document.querySelectorAll('.l-header-hamburger');
 
-    nav.querySelectorAll('a[href]').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            nav.classList.remove('open');
+    hamburgers.forEach(hamburger => {
+
+        // ハンバーガーと同じinner内にあるナビを取得
+        const inner = hamburger.closest('.l-header__inner');
+        const nav = inner?.querySelector('.l-header__nav');
+
+        if (!nav) return;
+
+        // クリックで開閉
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            nav.classList.toggle('open');
         });
-    });
-}
 
-const hamburgerUi = document.querySelector('.l-ui-header__hamburger');
-const navUi = document.querySelector('.l-ui-header__nav');
-
-if (hamburgerUi && navUi) {
-    hamburgerUi.addEventListener('click', () => {
-        hamburgerUi.classList.toggle('open');
-        navUi.classList.toggle('open');
-    });
-
-    navUi.querySelectorAll('a[href]').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburgerUi.classList.remove('open');
-            navUi.classList.remove('open');
+        // リンククリックで閉じる
+        nav.querySelectorAll('a[href]').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                nav.classList.remove('open');
+            });
         });
+
     });
-}
+
+});
 
 
  // 制作事例一覧絞り込み

@@ -139,18 +139,24 @@ select.w70 {
 html {
   height: 100%;
   scroll-padding-top: 6rem;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden;
   font-size: 1.4rem;
 }
 @media (min-width: 1024px) {
   body {
     font-size: 1.6rem;
   }
+}
+
+body.is-scroll {
+  height: auto;
 }
 
 header {
@@ -830,6 +836,12 @@ p, a, li {
   width: max-content;
 }
 
+.l-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 @media (min-width: 1024px) {
   .l-header.is-scrolled {
     width: 100%;
@@ -880,6 +892,8 @@ p, a, li {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: sticky;
+  top: 0;
 }
 .l-header--sub .l-header__nav {
   background-color: #f5f5f5;
@@ -909,9 +923,12 @@ p, a, li {
 }
 .l-header--sub .l-header__link {
   padding-block: 13px;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (min-width: 1024px) {
+  .l-header--sub {
+    height: 80px;
+  }
   .l-header--sub .l-header__nav {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
@@ -945,6 +962,46 @@ p, a, li {
   }
   .l-header--sub .l-header__link {
     font-size: 16px;
+  }
+}
+
+.l-header--top {
+  z-index: 1;
+}
+@media (min-width: 1024px) {
+  .l-header--top {
+    height: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .l-header--top .l-header__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  body.is-scrolled .l-header--top {
+    height: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  body.is-scrolled .l-header__nav {
+    left: 0;
+    top: 0;
   }
 }
 
@@ -1020,6 +1077,49 @@ p, a, li {
   top: 0;
   height: 100vh;
   z-index: 10;
+}
+
+#p-ui .l-header--sub {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#p-ui .l-header__nav {
+  z-index: 200;
+}
+#p-ui .l-header-hamburger {
+  z-index: 201;
+}
+#p-ui .l-header__link {
+  margin-left: 35px;
+}
+@media (min-width: 1024px) {
+  #p-ui .l-ui-header__inner {
+    padding: 10px;
+    height: 70px !important;
+  }
+  #p-ui .l-ui-header__nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    row-gap: 0;
+    height: 70px !important;
+  }
+  #p-ui .l-ui-header__link {
+    margin-left: 35px;
+  }
+}
+@media (min-width: 1280px) {
+  #p-ui .l-ui-header__nav {
+    max-width: 100% !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
 }
 
 .l-footer {
@@ -1189,12 +1289,22 @@ p, a, li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 90vh;
+  height: 50vh;
   position: relative;
-  margin-top: 32px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  .fv__inner {
+    height: 70vh;
+  }
+}
+@media (min-width: 1024px) {
+  .fv__inner {
+    height: 90vh;
+    margin-top: 40px;
+  }
 }
 .fv p {
   font-weight: 400;
@@ -1204,6 +1314,12 @@ p, a, li {
   top: 0;
   right: 0;
   font-size: clamp(1.1rem, 0.8567567568rem + 0.6486486486vw, 1.7rem);
+  display: none;
+}
+@media (min-width: 1024px) {
+  .fv__top {
+    display: block;
+  }
 }
 .fv__bottom {
   display: -webkit-box;
@@ -1236,6 +1352,9 @@ p, a, li {
   .fv__inner {
     margin-inline: 40px;
     height: 730px;
+  }
+  .fv__title {
+    line-height: 1.2;
   }
 }
 

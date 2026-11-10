@@ -18,10 +18,16 @@
         margin-inline: 15px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 90vh;
+        height: 50vh;
         position: relative;
-        margin-top: 32px;
+        justify-content: flex-end;
+        @include mq(sm) {
+            height: 70vh;
+        }
+        @include mq(md) {
+            height: 90vh;
+            margin-top: 40px;
+        }
     }
     p {
         font-weight: 400;
@@ -31,6 +37,10 @@
         top: 0;
         right: 0;
         font-size: myClamp(11,17);
+        display: none;
+        @include mq(md) {
+            display: block;
+        }
     }
     &__bottom {
         display: flex;
@@ -56,6 +66,9 @@
         &__inner {
             margin-inline: 40px;
             height: 730px;
+        }
+        &__title {
+            line-height: 1.2;
         }
     }
 }

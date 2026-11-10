@@ -105,17 +105,22 @@ select {
 
 // フッター画面最下層に固定
 html {
-  height: 100%;
-  scroll-padding-top: 6rem; //アンカーリンクでヘッダーの高さ分余白調整
+	height: 100%;
+	scroll-padding-top: 6rem; //アンカーリンクでヘッダーの高さ分余白調整
+	overflow-x: hidden;
 }
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-size: 1.4rem;
-  @include mq(md) {
-    font-size: 1.6rem;
-  }
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-x: hidden;
+	font-size: 1.4rem;
+	@include mq(md) {
+		font-size: 1.6rem;
+	}
+}
+body.is-scroll {
+	height: auto;
 }
 header {
   width: 100%;

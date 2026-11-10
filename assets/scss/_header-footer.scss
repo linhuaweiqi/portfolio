@@ -14,6 +14,10 @@
     }
 }
 .l-header.is-scrolled {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     @include mq(md) {
         width: 100%;
         margin: 0;
@@ -51,6 +55,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    // background: #fff;
+    // background: rgba(255, 255, 255, 0.2);
+    // backdrop-filter: blur(10px);
     .l-header {
         &__nav {
             background-color: #f5f5f5;
@@ -75,10 +84,11 @@
         }
         &__link {
             padding-block: 13px;
-            font-size: 18px;
+            font-size: 16px;
         }
     }
     @include mq(md) {
+        height: 80px;
         .l-header {
             &__nav {
                 transform: translateX(0%);
@@ -105,6 +115,39 @@
                 font-size: 16px;
             }
         }
+    }
+}
+.l-header--top {
+    z-index: 1;
+    @include mq(md) {
+        height: 0;
+    }
+    .l-header {
+        @include mq(md) {
+            &__nav {
+                flex-direction: column;
+                height: auto;
+                width: max-content;
+                margin: 0;
+                position: absolute;
+                left: 40px;
+                top: 30px;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+body.is-scrolled {
+    .l-header--top {
+        @include mq(md) {
+            height: 80px;
+        }
+    }
+    .l-header__nav {
+        @include mq(md) {
+            left: 0;
+            top: 0;
+        }   
     }
 }
 
@@ -164,6 +207,50 @@
     height: 100vh;
     z-index: 10;
 }
+#p-ui {
+    .l-header {
+        &--sub {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        &__nav {
+             z-index: 200;   
+        }
+        &-hamburger {
+            z-index: 201;
+        }
+        &__link {
+            margin-left: 35px;
+        }
+    }
+    .l-ui-header {
+        @include mq(md) {
+            &__inner {
+                    padding: 10px;
+                    height: 70px !important;
+            }
+            &__nav {
+                align-items: center;
+                display: flex;
+                row-gap: 0;
+                height: 70px !important;
+                
+            }
+            &__link {
+                margin-left: 35px;
+            }
+        }
+        @include mq(lg) {
+            &__nav {
+                max-width: 100% !important;
+                justify-content: center !important;
+            }
+        }
+    }
+    
+}
 
 // ----------------------
 // footer
@@ -175,7 +262,5 @@
         font-weight: 400;
     }
 }
-
-
 // footer end
 
