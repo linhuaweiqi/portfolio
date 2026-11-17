@@ -137,34 +137,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // スクロール位置による判定
-    function updateActiveLink() {
-        if (clickedTarget) {
-            const target = document.getElementById(clickedTarget);
+    // function updateActiveLink() {
+    //     if (clickedTarget) {
+    //         const target = document.getElementById(clickedTarget);
 
-            if (target && Math.abs(target.getBoundingClientRect().top) > 150) {
-                return;
-            }
+    //         if (target && Math.abs(target.getBoundingClientRect().top) > 150) {
+    //             return;
+    //         }
 
-            clickedTarget = null;
-        }
+    //         clickedTarget = null;
+    //     }
 
-        let current = sections[0];
+    //     let current = sections[0];
 
-        sections.forEach((section) => {
-            if (section.getBoundingClientRect().top <= 150) {
-                current = section;
-            }
-        });
+    //     sections.forEach((section) => {
+    //         if (section.getBoundingClientRect().top <= 150) {
+    //             current = section;
+    //         }
+    //     });
 
-        if (
-            window.innerHeight + window.scrollY >=
-            document.documentElement.scrollHeight - 5
-        ) {
-            current = sections[sections.length - 1];
-        }
+    //     if (
+    //         window.innerHeight + window.scrollY >=
+    //         document.documentElement.scrollHeight - 5
+    //     ) {
+    //         current = sections[sections.length - 1];
+    //     }
 
-        if (current) setActive(current.id);
-    }
+    //     if (current) setActive(current.id);
+    // }
 
     window.addEventListener("scroll", updateActiveLink);
     window.addEventListener("resize", updateActiveLink);
